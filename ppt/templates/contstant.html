@@ -1,0 +1,101 @@
+{% extends 'main.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap 4 Card Sizing</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+    .bs-example{
+        margin: 0px;
+    }
+</style>
+</head>
+<body>
+<div class="bs-example">
+    <div class="container-fluid">
+        <!-- Card sizing using grid markup -->
+        <div class="row mb-4">
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">ANDROID-10</h5>
+                        <hr>
+                        <p class="card-text">A19CAEA36(M.S SANOFER)</p>
+                        <p class="card-text">A19CAEA17(N.KHATHIJATHUL FATHIMA)</p>
+                        <p class="card-text">A19CAEB09(S.FAMEENA SOWHATH)</p>
+                        <p class="card-text">A19CAEB33(K.SHANTHINI)</p>
+                        <p class="card-text"><small class="text-muted"><b>I-BCA-A,B</b></small></p>
+                        <!-- <a href="#" class="btn btn-primary">Know more</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">FUTURE OF AI</h5>
+                        <hr>
+                        <p class="card-text">A18CAEA13(S.HELEN SOPHIA)</p>
+                        <p class="card-text">A18CAEA08(A.AYISHA BATHUL)</p>
+                        <p class="card-text">A18CAEB33(K.S.SHOUNDARYAA)</p>
+                        <p class="card-text">A18CAEB34(S.SIVARANJANI)</p>
+                        <p class="card-text"><small class="text-muted"><b>II-BCA-A,B</b></small></p>
+                        <!-- <a href="#" class="btn btn-primary">Know more</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card sizing using sizing utility classes -->
+        <div class="card w-100 mb-4">
+            <div class="card bg-primary text-white text-center ">
+                    <blockquote class="blockquote mb-0">
+                        <h1>TECH'X'TRA</h1>
+                        <footer >
+                            <small>PAPER PRESENTATION</small>
+                        </footer class="blockquote-footer text-white">
+                    </blockquote>
+             </div>       
+        </div>
+
+        <!-- Card sizing using sizing utility classes -->
+        <div class="row mb-4">
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">DEEP LEARNING</h5>
+                        <hr>
+                        <p class="card-text">A17CAEA39<u>(R.SWATHI)</u></p>
+                        <p class="card-text">A17CAEA42(S.SHEREEN)</p>
+                        <p class="card-text">A17CAEB09(G.DEEPIKA MELOSHA)</p>
+                        <p class="card-text">A17CAEB41(J.R. PRIYANKA)</p>
+                        <p class="card-text"><small class="text-muted"><b>III-BCA-A,B</b></small></p>
+                        <!-- <a href="#" class="btn btn-primary">Know more</a> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">DATA SCIENCE</h5>
+                        <hr>
+                        <p class="card-text">A18ACE19(S.JAYASEELI)</p>
+                        <p class="card-text">A18ACE29(I.SAHANA PARVEEN)</p>
+                        <p class="card-text">A19ACEA11(KUNDAVAI DEVI.R)</p>
+                        <p class="card-text">A19ACE28(SIVARANJANI.B)</p>
+                        <p class="card-text"><small class="text-muted"><b>I-BBA(CA)</b></small></p>
+                        <!-- <a href="#" class="btn btn-primary">Know more</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>
+{% endblock %}

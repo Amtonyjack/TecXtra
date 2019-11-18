@@ -1,0 +1,74 @@
+{% extends 'main.html' %}
+{% load static from staticfiles %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap 4 Horizontal Card</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+    .bs-example{
+        margin: 40px;
+    }
+    .title-area {
+	display: inline;
+	float: left;
+	padding: 0 172px;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+.tittle {
+	color: #3a3a3a;
+	font-size: 40px;
+	margin-bottom: 0;
+	padding-bottom: 18px;
+}
+.tittle-line {
+	background-color: #898989;
+	display: inline-block;
+	height: 3px;
+	margin-bottom: 16px;
+	width: 60px;
+}
+</style>
+</head>
+<body>
+<div class="title-area">
+              <h2 class="tittle">Meet our Honorable Staff</h2>
+              <span class="tittle-line"></span>
+              <!--<p>ORGANISER'S FOR PAPER PRESENTATON</p>-->
+            </div>
+<div class="bs-example">
+    <div class="card" style="max-width: 700px;">
+        <div class="row no-gutters">
+            <div class="col-md-5" style="background: #868e96;">
+                <img src="{% static 'img/staf.jpg' %}" class="card-img-top h-100" alt="...">
+            </div>
+
+            <div class="col-md-7">
+                <div class="card-body">
+                    <CENTER><h5 class="card-title">Mrs.R.ROSLINE MCA,M.Phil.,</h5></CENTER>
+                    <hr>
+                    <CENTER><h6 class="card-title">ASST. PROFESSOR OF COMPUTER APPLICATION</h6></CENTER>
+                    <hr>
+                    <br>
+                    <!--<p>.</p>-->
+                    <!--<p>.</p>-->
+                    <!--<p>.</p>-->
+                    <center><h5 class="card-text"><b>"The greatest gift I've ever received is being a teacher"</b></h5></center>
+                    <!-- <a href="#" class="btn btn-primary stretched-link">View Profile</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

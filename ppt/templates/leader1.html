@@ -1,0 +1,85 @@
+{% extends 'main.html' %}
+{% load static from staticfiles %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap 4 Card Deck</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+    .bs-example{
+        margin: 10px;
+    }
+    .tittle-line {
+	background-color: #898989;
+	display: inline-block;
+	height: 3px;
+	margin-bottom: 16px;
+	width: 60px;
+    }
+
+</style>
+</head>
+<body>
+<!--<div class="title-area">-->
+              <center><h2 class="tittle">Meet our Team</h2>
+              <span class="tittle-line"></span>
+              <p>ORGANISER'S FOR PAPER PRESENTATON</p></center>
+            </div>
+<div class="bs-example">
+    <div class="container">
+        <div class="row">
+            <div class="card-deck">
+                <div class="card">
+                    <img src="{% static 'img/e.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">J.TONY JACK </h5>
+                        <p class="card-text">EVENT LEADER</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">I-Msc.IT</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/2.JPG' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">S.ABBU BAKKAR </h5>
+                        <p class="card-text">ASST.ORGANISAR</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">II-Msc.IT</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/4.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">M.ANAND</h5>
+                        <p class="card-text">ASST.ORGANISAR</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">I-Msc.IT</small>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/3.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">SWATHI </h5>
+                        <p class="card-text">ASST.ORGANISAR</p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">I-Msc.IT</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,188 @@
+{% extends 'main.html' %}
+{% load static from staticfiles %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Bootstrap 4 Borderless Table</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    .bs-example{
+    	margin: 0px;
+    }
+</style>
+</head>
+<body>
+<center>
+  <form class="marks" method="post" action="/getmarks/">
+    {% csrf_token %}
+  <div class="box">
+<table class="content-table">
+  <thead>
+    <tr>
+      <th>DEPT/SEC</th>
+      <th>NAME</th>
+      <th>PRESENTATION</th>
+      <th>QUERIES</th>
+      <th>COMMUNICATION</th>
+      <th>AUDIENCE</th>
+      <th>TOTAL</th>
+      <th>!</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><input type="text" id="one" name="DEPT_SEC" list="DEPTSEC">
+<datalist id="DEPTSEC">
+  <option value="I-BCA-A">
+  <option value="I-BCA-B">
+  <option value="II-BCA-A">
+  <option value="II-BCA-B">
+  <option value="III-BCA-A">
+  <option value="III-BCA-B">
+  <option value="I-BBA(CA)">
+  <option value="II-BBA(CA)">
+</datalist><br></td>
+        <!--<td>select name="DEPT_SEC" /><option value="I-BCA-A">I-BCA-A</option>-->
+    <!--<option value="I-BCA-B">I-BCA-B</option>-->
+    <!--<option value="II-BCA-A">II-BCA-A</option>-->
+    <!--<option value="II-BCA-B">II-BCA-B</option>-->
+        <!--<option value="III-BCA-A">III-BCA-A</option>-->
+    <!--<option value="II-BCA-B">III-BCA-B</option>-->
+        <!--<option value="I-BBA(CA)">I-BBA(CA)</option>-->
+    <!--<option value="II-BBA-(CA)">II-BBA(CA)</option>-->
+        <!--<br></td>-->
+      <td><input type="text" id="two" name="NAME" list="NAME">
+<datalist id="NAME">
+  <option value="(M.S SANOFER)(N.KHATHIJATHUL FATHIMA)">
+  <option value="(S.FAMEENA SOWHATH)(K.SHANTHINI)">
+  <option value="(S.HELEN SOPHIA)(A.AYISHA BATHUL)">
+  <option value="(K.S.SHOUNDARYAA)(S.SIVARANJANI)">
+  <option value="(R.SWATHI)(S.SHEREEN)">
+  <option value="(G.DEEPIKA MELOSHA)(J.R. PRIYANKA)">
+  <option value="(KUNDAVAI DEVI.R)(SIVARANJANI.B)">
+  <option value="(S.JAYASEELI)(I.SAHANA PARVEEN)">
+</datalist><br></td>
+      <td><input type="text" id="a1" name="PRESENTATION" /><br></td>
+      <td><input type="text" id="a2" name="QUERIES" /><br></td>  
+      <td><input type="text" id="a3" name="COMMUNICATION" /><br></td>
+      <td><input type="text" id="a4" name="AUDIENCE" /><br></td>
+      <td><input type="text" id="a5" name="TOTAL" /><br></td>
+      <td><button class="button button4" onclick="l1()">set</button>
+  </tbody>
+</table>  
+</div>
+  </form>
+  <!--<center>-->
+   <!--<div class="container-fluid">-->
+    <!--<div class="offset-md-3 col-md-6">-->
+        <!--<hr>-->
+    <!--<center><p><b>login</b></p></center>-->
+    <!--<hr>-->
+    <!--<table class="table table-borderless">-->
+        <!--<thead>-->
+            <!--<tr>-->
+                <!--<th>DEPT_SEC</th>-->
+                <!--<th>PRESENTATION</th>-->
+                <!--<th>QUERIES</th>-->
+                <!--<th>COMMUNICATION</th>-->
+                <!--<th>AUDIENCE</th>-->
+                <!--<th>TOTAL</th>-->
+            <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--{% for score in All_mark %}-->
+        <!--<tr>-->
+
+                <!--<td data-target="DEPT_SEC">{{ score.DEPT_SEC }}</td>-->
+                <!--<td data-target="PRESENTATION">{{ score.PRESENTATION }}</td>-->
+                <!--<td data-target="QUERIES">{{ score.QUERIES }}</td>-->
+                <!--<td data-target="COMMUNICATION">{{ score.COMMUNICATION }}</td>-->
+                <!--<td data-target="AUDIENCE">{{ score.AUDIENCE }}</td>-->
+                <!--<td data-target="TOTAL">{{ score.TOTAL }}</td>-->
+
+        <!--</tr>-->
+        <!--{% endfor %}-->
+            <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>2</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>John</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>Carter</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>johncarter@mail.com</td>&ndash;&gt;-->
+            <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+            <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>3</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>Peter</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>Parker</td>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td>peterparker@mail.com</td>&ndash;&gt;-->
+            <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+        <!--</tbody>-->
+    <!--</table>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+  <!--</center>-->
+<!--</center>-->
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="col">
+    <div class="row-md-4">
+      <h2>OVERALL TABLE </h2>
+      <hr>
+      <table>
+        <thead>
+          <tr>
+                <th>[DEPT_SEC]<hr></th>
+                <th>[NAME]<hr></th>
+                <th>[PRESENTATION]<hr></th>
+                <th>[QUERIES]<hr></th>
+                <th>[COMMUNICATION]<hr></th>
+                <th>[AUDIENCE]<hr></th>
+                <th>[TOTAL]<hr></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for score in All_mark %}
+        <tr>
+
+          <td data-target="DEPT_SEC"><center>{{ score.DEPT_SEC }}</center></center></td>
+          <td data-target="NAME"><center>{{ score.NAME }}</center></center></td>
+          <td data-target="PRESENTATION"><center>{{ score.PRESENTATION }}</center></td>
+          <td data-target="QUERIES"><center>{{ score.QUERIES }}</center></td>
+          <td data-target="COMMUNICATION"><center>{{ score.COMMUNICATION }}</center></td>
+          <td data-target="AUDIENCE"><center>{{ score.AUDIENCE }}</center></td>
+          <td data-target="TOTAL"><center>{{ score.TOTAL }}</center></td>
+
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <!--<div class="col-md-6">-->
+      <!--<h1>MARKS ALLOCATIONS</h1>-->
+      <!--<h2>PRESENTATION FOR 10 MARKS</h2>-->
+      <!--<h2>QUERIES 10 MARKS</h2>-->
+      <!--<h2>COMMUNICATION FOR 10 MARKS</h2>-->
+      <!--<h2>AUDIENCE FOR 10 MARKS</h2>-->
+      <!--<h2>OVERALL  40 MARKS</h2>-->
+      <!--</div>-->
+  </div>
+  <hr>
+
+</div>
+
+<script src="{% static 'js/pro.js' %}"></script>
+</body>
+</html>
+{% endblock %}

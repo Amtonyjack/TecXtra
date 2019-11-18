@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% load static from staticfiles %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PROGRESS TIMINGd</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/time.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+	<center><h2>PAPER PRESENTATION TIMING DURATION</h2>
+                    <hr>
+                <h3><p class="lead">PRESENTATION DURATION = 8 Min</p></h3> <!-- 480,120,60 -->
+                <h3><p class="lead">QUERIES DURATION = 2 Min </p></h3>
+                <h3><p class="lead">AUDIENCE DURATION = 1 Min </p></h3></center>
+	<!--<div class="container-fuild">-->
+            <!--<div class="jumbotron bg-light">-->
+                <!--<div class="card bg-primary text-white text-center ">-->
+                <!--<center><h1>PAPER PRESENTATION TIMING DURATION</h1>-->
+                    <!--<hr>-->
+                    <!--<br>-->
+                <!--<h3><p class="lead">PRESENTATION DURATION = 8 Min</p></h3> &lt;!&ndash; 480,120,60 &ndash;&gt;-->
+                <!--<h3><p class="lead">QUERIES DURATION = 2 Min </p></h3>-->
+                <!--<h3><p class="lead">AUDIENCE DURATION = 1 Min </p></h3></center>-->
+            <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+	
+</header>
+<div class="content">
+	<div class="counter"></div>
+	<input type="number" id="seconds">
+	<div class = "buttons">
+		<button class="btn start" id="start" value="1" onclick="check(this)">START</button>
+		<button class="btn start" id="continue" value="1" onclick="check(this)">CONTINUE</button>
+		<button class="btn stop" id="stop" value="0" onclick="check(this)">STOP</button>
+		<button class="btn start" id="ok" onclick="toSubmit()">SET</button>
+	</div>
+</div>
+<script type="text/javascript" src="{% static 'js/time.js' %}"></script>
+</body>
+</html>
+{% endblock %}
